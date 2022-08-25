@@ -1,0 +1,29 @@
+# Write your count_multi_char_x function here:
+def count_multi_char_x(word, x):
+  count = 0
+  start = 0
+    # Search through the string till
+    # we reach the end of it
+  while start < len(x):
+ 
+        # Check if a substring is present from
+        # 'start' position till the end
+      pos = word.find(x, start)
+ 
+      if pos != -1:
+            # If a substring is present, move 'start' to
+            # the next position from start of the substring
+        start = pos + 1
+ 
+            # Increment the count
+        count += 1
+      else:
+            # If no further substring is present
+        break
+    # return the value of count
+  return count
+# Uncomment these function calls to test your function:
+print(count_multi_char_x("mississippi", "iss"))
+# should print 2
+#print(count_multi_char_x("apple", "pp"))
+# should print 1
